@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://ccw8taa45g7ok"]
+
+[ext_resource type="PackedScene" uid="uid://bqyt66qognb6h" path="res://lessons/simple_obstacle.tscn" id="1_dsdrx"]
+[ext_resource type="PackedScene" uid="uid://bw7oebjpdt5r8" path="res://lessons/runner.tscn" id="2_v3uex"]
+
+[node name="Game_tscn" type="Node2D"]
+
+[node name="simpleobstacle" parent="." instance=ExtResource("1_dsdrx")]
+z_index = -1
+position = Vector2(4, 5)
+scale = Vector2(1.0353038, 1)
+
+[node name="Runner" parent="." instance=ExtResource("2_v3uex")]
+y_sort_enabled = true
+position = Vector2(127, 106)
+
+[node name="Camera2D" type="Camera2D" parent="Runner"]
+scale = Vector2(0.6715948, -11.555225)

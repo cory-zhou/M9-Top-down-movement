@@ -6,10 +6,11 @@
 [ext_resource type="PackedScene" uid="uid://bqkoh1b4h5357" path="res://lessons/curcuit.tscn" id="4_geir3"]
 
 [node name="Game_tscn" type="Node2D"]
+y_sort_enabled = true
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 z_index = -1
-position = Vector2(-573, -853)
+position = Vector2(-560, -833)
 texture = ExtResource("1_v3uex")
 
 [node name="Runner" parent="." instance=ExtResource("2_v3uex")]
@@ -20,6 +21,7 @@ position = Vector2(205, -102)
 scale = Vector2(0.6715948, -11.555225)
 
 [node name="Curcuit" parent="." instance=ExtResource("4_geir3")]
+y_sort_enabled = true
 position = Vector2(-602, -862)
 
 [node name="SimpleObstacle" parent="." instance=ExtResource("1_dsdrx")]

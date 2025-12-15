@@ -10,6 +10,7 @@ position = Vector2(32, 32)
 texture = ExtResource("1_ufehm")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+y_sort_enabled = true
 polygon = PackedVector2Array(512, -672, 768, -416, 992, -416, 1024, -416, 1248, -192, 1248, 448, 1024, 672, 864, 672, 832, 672, 608, 448, 608, 64, 320, -224, -192, -224, -544, 64, -544, 448, -768, 672, -928, 672, -960, 672, -1184, 448, -1184, -160, -1184, -192, -704, -672, 480, -672)
 
 [node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="."]

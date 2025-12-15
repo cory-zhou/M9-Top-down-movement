@@ -3,17 +3,16 @@
 [ext_resource type="Script" uid="uid://cpxf6c874di4x" path="res://lessons/runner.gd" id="1_h1hi2"]
 [ext_resource type="PackedScene" uid="uid://bm8s1oaoxngwq" path="res://assets/runner/runner_visual_red.tscn" id="2_h1hi2"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_h1hi2"]
-size = Vector2(57.375, 218.5)
+[sub_resource type="CircleShape2D" id="CircleShape2D_f7b3c"]
+radius = 50.24938
 
 [node name="Runner" type="CharacterBody2D"]
 motion_mode = 1
 script = ExtResource("1_h1hi2")
 
 [node name="RunnerVisualRed" parent="." instance=ExtResource("2_h1hi2")]
-y_sort_enabled = true
-position = Vector2(0, -1)
+position = Vector2(-6, 55)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(2, -96.75)
-shape = SubResource("RectangleShape2D_h1hi2")
+position = Vector2(-4, 78)
+shape = SubResource("CircleShape2D_f7b3c")

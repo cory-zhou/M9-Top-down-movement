@@ -3,7 +3,7 @@ extends CharacterBody2D
 
 @export var acceleration := 1200.0
 @export var deceleration := 1080.0
-@onready var _runner_visual: RunnerVisual = $RunnerVisualRed
+@onready var _runner_visual: RunnerVisual = %RunnerVisualRed
 
 
 

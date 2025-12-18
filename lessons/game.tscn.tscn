@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://ccw8taa45g7ok"]
+[gd_scene load_steps=9 format=3 uid="uid://ccw8taa45g7ok"]
 
 [ext_resource type="Script" uid="uid://dfv2sqigvxehw" path="res://lessons/game.tscn.gd" id="1_5yt2l"]
 [ext_resource type="PackedScene" uid="uid://bqyt66qognb6h" path="res://lessons/simple_obstacle.tscn" id="1_dsdrx"]
@@ -6,13 +6,16 @@
 [ext_resource type="PackedScene" uid="uid://xl56q8amb611" path="res://assets/finish_line/finish_line.tscn" id="2_lphnm"]
 [ext_resource type="PackedScene" uid="uid://bw7oebjpdt5r8" path="res://lessons/runner.tscn" id="2_v3uex"]
 [ext_resource type="PackedScene" uid="uid://bqkoh1b4h5357" path="res://lessons/curcuit.tscn" id="4_geir3"]
+[ext_resource type="Theme" uid="uid://cdcyvsn1fp8wa" path="res://assets/countdown/count_down_theme.tres" id="7_be7pi"]
+[ext_resource type="Script" uid="uid://57e8080cpukf" path="res://assets/countdown/count_down.gd" id="8_1aw6d"]
 
 [node name="Game_tscn" type="Node2D"]
 y_sort_enabled = true
 script = ExtResource("1_5yt2l")
 
 [node name="FinishLine" parent="." instance=ExtResource("2_lphnm")]
-position = Vector2(-1544, -573)
+unique_name_in_owner = true
+position = Vector2(-1711, -247)
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 z_index = -1
@@ -20,7 +23,9 @@ position = Vector2(-514, -819)
 texture = ExtResource("1_v3uex")
 
 [node name="Runner" parent="." instance=ExtResource("2_v3uex")]
+unique_name_in_owner = true
 y_sort_enabled = true
+position = Vector2(58, -118)
 
 [node name="Camera2D" type="Camera2D" parent="Runner"]
 scale = Vector2(0.6715948, -11.555225)
@@ -32,3 +37,26 @@ position = Vector2(-616, -849)
 
 [node name="SimpleObstacle2" parent="." instance=ExtResource("1_dsdrx")]
 position = Vector2(-1872, -952)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="CountDown" type="Label" parent="CanvasLayer"]
+unique_name_in_owner = true
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -175.5
+offset_top = -220.5
+offset_right = 175.5
+offset_bottom = 220.5
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("7_be7pi")
+text = "TesT
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("8_1aw6d")
+metadata/_custom_type_script = "uid://57e8080cpukf"
